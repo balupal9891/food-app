@@ -1,15 +1,14 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import { AppProvider } from "@/components/AppContext";
+import { Toaster } from 'react-hot-toast';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const roboto = Roboto({
+//   subsets: ["latin"],
+//   weight: ['400', '500', '600'],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,11 +17,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        // className={roboto.className}
       >
-        {children}
+        <main className="max-w-4xl mx-auto p-4">
+          <AppProvider>
+            <Toaster />
+          <Header />
+          {children}
+          <footer className="border-t p-6 text-center text-gray-500">
+            &copy; 2025 All Right Reserved
+          </footer>
+          </AppProvider>
+        </main>
       </body>
     </html>
   );
