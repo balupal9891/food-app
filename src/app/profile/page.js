@@ -54,11 +54,11 @@ export default function ProfilePage() {
         })
 
 
-        // await toast.promise(savingPromise, {
-        //   loading: 'Saving...',
-        //   success: 'Profile saved!',
-        //   error: 'Error',
-        // });
+        await toast.promise(savingPromise, {
+          loading: 'Saving...',
+          success: 'Profile saved!',
+          error: 'Error',
+        });
 
     }
 
