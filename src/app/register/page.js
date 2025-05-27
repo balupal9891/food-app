@@ -47,8 +47,8 @@ export default function ResigterPage() {
                 </div>
             )}
             <form onSubmit={handleFormSubmit} className="block max-w-xs mx-auto">
-                <input type="email" name="" id="" placeholder="email" value={email} onChange={ev => setEmail(ev.target.value)} disabled={creatingUser} />
-                <input type="password" name="" id="" placeholder="password" value={password} onChange={ev => setPassword(ev.target.value)} disabled={creatingUser} />
+                <input type="email" name="" id="1" placeholder="email" value={email} onChange={ev => setEmail(ev.target.value)} disabled={creatingUser} />
+                <input type="password" name="" id="2" placeholder="password" value={password} onChange={ev => setPassword(ev.target.value)} disabled={creatingUser} />
                 <button type="submit" disabled={creatingUser}>Register</button>
                 <div className="text-center my-4">
                     login with provider
