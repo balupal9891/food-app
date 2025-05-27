@@ -1,6 +1,6 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
-import { CldUploadWidget } from 'next-cloudinary';
+// import { CldUploadWidget } from 'next-cloudinary';
 
 export default function EditableImage({ link, setLink }) {
 
