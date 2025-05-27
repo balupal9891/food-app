@@ -11,7 +11,7 @@ import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import { resolve } from "styled-jsx/css";
-// import toast from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ProfilePage() {
     const session = useSession();
@@ -44,6 +44,7 @@ export default function ProfilePage() {
                 body: JSON.stringify(data),
                 header: { 'content-type': 'application/json' }
             })
+           
             // console.log(response)
             if(response.ok){
                 resolve()
@@ -52,13 +53,14 @@ export default function ProfilePage() {
                 reject()
             }
         })
-
-
-        await toast.promise(savingPromise, {
+         await toast.promise(savingPromise, {
           loading: 'Saving...',
           success: 'Profile saved!',
           error: 'Error',
         });
+
+
+        
 
     }
 

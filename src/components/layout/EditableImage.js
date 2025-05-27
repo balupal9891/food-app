@@ -1,7 +1,8 @@
 import Image from "next/image";
 import toast from "react-hot-toast";
+import { CldUploadWidget } from 'next-cloudinary';
 
-export default function EditableImage({link, setLink}) {
+export default function EditableImage({ link, setLink }) {
 
   async function handleFileChange(ev) {
     const files = ev.target.files;
@@ -9,23 +10,15 @@ export default function EditableImage({link, setLink}) {
       const data = new FormData;
       data.set('file', files[0]);
 
-      const uploadPromise = await fetch('/api/upload', {
+      await fetch('/api/upload', {
         method: 'POST',
         body: data,
-      }).then(response => {
-        if (response.ok) {
-          return response.json().then(link => {
-            setLink(link);
-          })
-        }
-        throw new Error('Something went wrong');
-      });
-
-      await toast.promise(uploadPromise, {
-        loading: 'Uploading...',
-        success: 'Upload complete',
-        error: 'Upload error',
-      });
+      }).then( res => {
+        res.json().then(data =>{
+          setLink(data?.imageUrl)
+          toast.success("Image Update");
+        })
+      })
     }
   }
 
@@ -43,6 +36,7 @@ export default function EditableImage({link, setLink}) {
         <input type="file" className="hidden" onChange={handleFileChange} />
         <span className="block border border-gray-300 rounded-lg p-2 text-center cursor-pointer">Change image</span>
       </label>
+
     </>
   );
 }
