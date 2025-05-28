@@ -10,7 +10,6 @@ import { useSession } from "next-auth/react";
 // import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
-import { resolve } from "styled-jsx/css";
 import toast from "react-hot-toast";
 
 export default function ProfilePage() {

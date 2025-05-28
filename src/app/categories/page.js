@@ -2,11 +2,8 @@
 import UserTabs from "@/components/layout/UserTabs";
 import { useProfile } from "@/components/UseProfile";
 import { useEffect, useState } from "react";
-import { resolve } from "styled-jsx/css";
+
 import toast from "react-hot-toast";
-import Delete from "@/components/icons/Delete";
-import Right from "@/components/icons/Right";
-import Edit from "@/components/icons/Edit";
 import DeleteButton from "@/components/DeleteButton";
 
 export default function CategoriesPage() {
