@@ -10,7 +10,7 @@ export const authOptions = {
   secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
-      name: 'Credentials',
+      name: 'credentials',
       id: 'credentials',
       credentials: {
         username: { label: "Email", type: "email"},
