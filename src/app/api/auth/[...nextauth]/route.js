@@ -10,10 +10,10 @@ export const authOptions = {
   secret: process.env.SECRET,
   providers: [
     CredentialsProvider({
-      name: 'credentials',
+      name: 'Credentials',
       id: 'credentials',
       credentials: {
-        username: { label: "Email", type: "email"},
+        email: { label: "Email", type: "email"},
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
