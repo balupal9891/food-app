@@ -5,10 +5,10 @@ export default function Hero(){
     return(
         <section className="hero">
             <div className="py-12">
-                <h1 className=" text-4xl font-semibold sm:text-lg">
+                <h1 className=" text-3xl font-semibold ">
                     Everything is <br />
                     better with <br />
-                    <span className="text-red-700">Pizza</span>
+                    <span className="text-red-700 text-2xl">Pizza</span>
                 </h1>
                 <p className="my-4 text-gray-500">
                     Pizza is the missing piece that make every day complete, a simple yet delicious joy in life

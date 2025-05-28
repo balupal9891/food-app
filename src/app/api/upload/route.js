@@ -32,7 +32,9 @@ export async function POST(req) {
     // console.log(`${path}`);
 
     
-
+    if(!response){
+      return Response({});
+    }
 
 
 
