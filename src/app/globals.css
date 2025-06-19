@@ -30,6 +30,8 @@ input[type="text"]:disabled {
     @apply bg-gray-300 border-0 cursor-not-allowed text-gray-500;
 }
 
+
+
 /* button {
     @apply block my-2 w-full rounded-xl mx-auto font-semibold;
     @apply border border-gray-600 py-2;
